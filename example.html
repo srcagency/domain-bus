@@ -1,0 +1,34 @@
+<div id="messages"></div>
+<form>
+	<input type="text" id="message" />
+	<input type="submit" />
+</form>
+
+<script src="https://wzrd.in/standalone/domain-bus@latest"></script>
+<script>
+	var bus = window.domainBus();
+
+	var $messages = document.querySelector('#messages');
+	var $message = document.querySelector('#message');
+	var $form = document.querySelector('form');
+
+	$form.addEventListener('submit', function( e ){
+		e.preventDefault();
+
+		var message = $message.value;
+		$message.value = '';
+
+		bus.write(message);
+
+		add(message);
+	});
+
+	bus.listen(add);
+
+	function add( message ){
+		var $message = document.createElement('p');
+		$message.textContent = message;
+
+		$messages.appendChild($message);
+	}
+</script>

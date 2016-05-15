@@ -1,0 +1,29 @@
+{
+	"name": "domain-bus",
+	"description": "Cross-window communication in the browser",
+	"version": "0.0.1",
+	"repository": "srcagency/domain-bus",
+	"scripts": {
+		"test": "node test",
+		"browser-test": "testling"
+	},
+	"devDependencies": {
+		"tape": "^4.5.1",
+		"testling": "^1.7.1"
+	},
+	"testling": {
+		"files": "test.js",
+		"browsers": [
+			"ie/8..latest",
+			"chrome/22..latest",
+			"firefox/16..latest",
+			"safari/6..latest",
+			"opera/11.0..latest",
+			"iphone/6..latest",
+			"ipad/6..latest",
+			"android-browser/latest"
+		]
+	},
+	"license": "MIT",
+	"author": "Thomas Jensen <thomas@src.agency> (http://src.agency)"
+}
