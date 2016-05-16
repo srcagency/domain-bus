@@ -2,6 +2,11 @@
 
 Seamless communication between browser tabs/windows on the same domain.
 
+- Works offline
+- Uses `localStorage` to synchronize
+- Inspired by [page-bus](https://www.npmjs.com/package/page-bus)
+- See also [browser-bus](https://github.com/srcagency/browser-bus)
+
 ## Examples
 
 ```js
