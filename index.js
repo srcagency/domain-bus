@@ -28,8 +28,13 @@ function Bus( opts ){
 
 	if (this._env.addEventListener)
 		this._env.addEventListener('storage', function( e ){
+			var p = JSON.parse(e.newValue);
+
+			if (p.i === bus._id)
+				return;
+
 			if (e.key === bus._localStorageKey)
-				emit(bus, JSON.parse(e.newValue).m);
+				emit(bus, p.m);
 		});
 }
 
