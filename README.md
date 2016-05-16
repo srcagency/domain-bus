@@ -9,6 +9,8 @@ Seamless communication between browser tabs/windows on the same domain.
 
 ## Examples
 
+Demo: https://srcagency.github.io/domain-bus (open in multiple tabs)
+
 ```js
 var Bus = require('domain-bus');
 
